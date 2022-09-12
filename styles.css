@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -11,11 +13,133 @@ html {
 body {
   display: grid;
   place-content: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 
+.section-intro {
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.subheading {
+  font-weight: 200;
+  font-size: 3.6rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.heading-primary {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.description {
+  color: hsl(229, 6%, 66%);
+  font-size: 1.4rem;
+  max-width: 50rem;
+  margin: 1.6rem 0;
+}
+
+.container {
+  display: grid;
+  gap: 3.6rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 10.5rem);
+  padding: 4.8rem;
+}
+
+.card {
+  width: 35rem;
+  border-radius: 11px;
+  padding: 3rem;
+  position: relative;
+  box-shadow: 0px 11px 15px 0px hsl(229, 6%, 66%, 0.3);
+  background-color: #fff;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.card--supervisor::before,
+.card--team-builder::before,
+.card--karma::before,
+.card--calculator::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding: 2%;
+  top: -10px;
+  left: 0;
+}
+
+.card--team-builder {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.card--supervisor {
+  grid-row: 2 / 4;
+}
+
+.card--karma {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+}
+
+.card--calculator {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}
+
+.card--supervisor::before {
+  background-color: hsl(180, 62%, 55%);
+}
+.card--team-builder::before {
+  background-color: hsl(0, 78%, 62%);
+}
+.card--karma::before {
+  background-color: hsl(34, 97%, 64%);
+}
+.card--calculator::before {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.card-title {
+  color: hsl(234, 12%, 34%);
+  font-size: 2rem;
+}
+
+.card-description {
+  color: hsl(229, 6%, 66%);
+  font-size: 1.4rem;
+}
+
+.img-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.6rem;
+}
+
+.img {
+  width: 6rem;
+  height: 6rem;
+  display: block;
+}
+
+/* Attribution */
 .attribution {
   font-size: 11px;
   text-align: center;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
