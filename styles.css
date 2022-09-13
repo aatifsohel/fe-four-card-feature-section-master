@@ -144,3 +144,60 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* For Small Screens */
+@media (max-width: 375px) {
+  body {
+    width: 100vw;
+  }
+
+  .section-intro {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .subheading,
+  .heading-primary {
+    font-size: 2.4rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+    margin: 1.6rem;
+
+    line-height: 1.6;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+    margin: 3rem 0;
+  }
+
+  .card {
+    max-width: 30rem;
+  }
+
+  .card--supervisor::before,
+  .card--team-builder::before,
+  .card--karma::before,
+  .card--calculator::before {
+    top: -9px;
+  }
+
+  .card-description {
+    font-size: 1.2rem;
+  }
+
+  .img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .attribution {
+    position: relative;
+  }
+}
